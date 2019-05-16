@@ -1,11 +1,3 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/node-apis/
- */
-
-// You can delete this file if you're not using it
-
 const path = require("path")
 
 module.exports.onCreateNode = ({ node, actions }) => {
@@ -19,4 +11,34 @@ module.exports.onCreateNode = ({ node, actions }) => {
       value: slug,
     })
   }
+}
+
+module.exports.createPages = async ({ graphql, actions }) => {
+  const { createPage } = actions
+  // Get path to template
+  const blogTemplate = path.resolve("./src/templates/blog.js")
+  // Get markdownn data slug
+  const res = await graphql(`
+    query {
+      allMarkdownRemark {
+        edges {
+          node {
+            fields {
+              slug
+            }
+          }
+        }
+      }
+    }
+  `)
+  // Create new pages
+  res.data.allMarkdownRemark.edges.forEach(edge => {
+    createPage({
+      component: blogTemplate,
+      path: `/blog/${edge.node.fields.slug}`,
+      context: {
+        slug: edge.node.fields.slug,
+      },
+    })
+  })
 }
