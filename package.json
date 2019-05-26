@@ -15,7 +15,6 @@
     "gatsby-plugin-sharp": "^2.0.37",
     "gatsby-remark-images": "^3.0.11",
     "gatsby-remark-relative-images": "^0.2.2",
-    "gatsby-source-contentful": "^2.0.60",
     "gatsby-source-filesystem": "^2.0.35",
     "gatsby-source-medium": "^2.0.7",
     "gatsby-transformer-remark": "^2.3.12",
@@ -36,7 +35,7 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
-    "develop": "env-cmd -f .env.development gatsby develop",
+    "develop": "env-cmd -f .env gatsby develop",
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
     "serve": "gatsby serve",
