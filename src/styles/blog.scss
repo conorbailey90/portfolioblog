@@ -1,0 +1,29 @@
+ol li {
+  list-style: none;
+  display: grid;
+  background: black;
+  border: 1px solid #2d2d2d;
+  margin-bottom: 0.5rem;
+  padding: 0.3rem;
+
+  & h2 {
+    font-weight: 100;
+    font-size: 1rem;
+    margin: 0.1rem;
+  }
+  & p {
+    font-weight: 100;
+    font-size: 0.6rem;
+    margin: 0.1rem;
+  }
+}
+
+ol li:hover {
+  opacity: 0.7;
+}
+
+ol li a {
+  text-decoration: none;
+  list-style: none;
+  color: white;
+}

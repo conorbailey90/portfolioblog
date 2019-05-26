@@ -1,16 +1,27 @@
 import React from "react"
 import Layout from "../components/layout"
-import { graphql, useStaticQuery } from "gatsby"
+import { Link, graphql, useStaticQuery } from "gatsby"
+import Head from "../components/head"
+import "../styles/blog.scss"
 
 const blogPage = () => {
   const data = useStaticQuery(graphql`
     query {
-      allMarkdownRemark {
+      allMediumPost(sort: { fields: [createdAt], order: DESC }) {
         edges {
           node {
-            frontmatter {
-              title
-              date
+            id
+            title
+            createdAt(formatString: "DD MMMM YYYY")
+            uniqueSlug
+            virtuals {
+              subtitle
+              previewImage {
+                imageId
+              }
+            }
+            author {
+              name
             }
           }
         }
@@ -19,14 +30,22 @@ const blogPage = () => {
   `)
   return (
     <Layout>
+      <Head title="Blog" />
       <div>
-        <h1>Conors Blog</h1>
+        <h1>Blog</h1>
         <ol>
-          {data.allMarkdownRemark.edges.map(edge => {
+          {data.allMediumPost.edges.map(edge => {
             return (
               <li>
-                <h2>{edge.node.frontmatter.title}</h2>
-                <p>{edge.node.frontmatter.date}</p>
+                <a
+                  href={`https://medium.com/@conbailey90/${
+                    edge.node.uniqueSlug
+                  }`}
+                  target="_blank"
+                >
+                  <h2>{edge.node.title}</h2>
+                  <p>{edge.node.createdAt}</p>
+                </a>
               </li>
             )
           })}

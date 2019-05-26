@@ -1,0 +1,30 @@
+.email {
+  margin: 1rem;
+  width: 100%;
+  text-align: left;
+  font-weight: 100;
+
+  & span {
+    opacity: 0.4;
+  }
+}
+
+.mobile {
+  margin: 1rem;
+  width: 100%;
+  text-align: left;
+  font-weight: 100;
+
+  & span {
+    opacity: 0.4;
+  }
+}
+
+h1 {
+  margin: 1rem;
+}
+
+p {
+  margin: 1rem;
+  font-size: 0.8rem;
+}

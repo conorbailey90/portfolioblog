@@ -1,6 +1,6 @@
 ---
-title: "react conor"
-date: "2019-05-15"
+title: "react"
+date: "19-07-2019"
 ---
 
 I am learning react mate

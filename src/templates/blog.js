@@ -1,12 +1,44 @@
-import React from "react"
-import Layout from "../components/layout"
+// import React from "react"
+// import { graphql } from "gatsby"
+// import Head from "../components/head"
+// import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
+// import Layout from "../components/layout"
 
-const Blog = () => {
-  return (
-    <Layout>
-      <h1>Blog Template</h1>
-    </Layout>
-  )
-}
+// export const query = graphql`
+//   query($slug: String!) {
+//     contentfulBlogPost(slug: { eq: $slug }) {
+//       title
+//       publishedDate(formatString: "MMMM Do, YYYY")
+//       body {
+//         json
+//       }
+//     }
+//   }
+// `
 
-export default Blog
+// const Blog = props => {
+//   const options = {
+//     renderNode: {
+//       "embedded-asset-block": node => {
+//         const alt = node.data.target.fields.title["en-US"]
+//         const url = node.data.target.fields.file["en-US"].url
+//         return <img alt={alt} src={url} />
+//       },
+//     },
+//   }
+//   return (
+//     <Layout>
+//       <Head title={props.data.contentfulBlogPost.title} />
+//       <div>
+//         <h1>{props.data.contentfulBlogPost.title}</h1>
+//         <p>{props.data.contentfulBlogPost.publishedDate}</p>
+//         {documentToReactComponents(
+//           props.data.contentfulBlogPost.body.json,
+//           options
+//         )}
+//       </div>
+//     </Layout>
+//   )
+// }
+
+// export default Blog
