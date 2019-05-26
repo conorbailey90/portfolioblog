@@ -12,12 +12,18 @@ const portfolioPage = () => {
           <div className="project">
             <img src={require("../images/conorsite.png")} alt="conor" />
             <div className="content-overlay">
-              <Link>
+              <a
+                href="https://conorbailey90.github.io/conor_portfolio/"
+                target="_blank"
+              >
                 <i class="fas fa-globe" />
-              </Link>
-              <Link>
+              </a>
+              <a
+                href="https://github.com/conorbailey90/conor_portfolio"
+                target="_blank"
+              >
                 <i className="fab fa-github" />
-              </Link>
+              </a>
               <p>Music production website</p>
             </div>
           </div>

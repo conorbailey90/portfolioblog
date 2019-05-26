@@ -1,14 +1,13 @@
 .wrapper {
   position: relative;
   display: grid;
-  grid-gap: 0.2rem;
+  grid-gap: 0.5rem;
   // grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   grid-template-columns: 350px;
   grid-auto-rows: 175px;
 
   & div {
     overflow: hidden;
-    // text-align: center;
   }
 }
 
@@ -21,28 +20,6 @@ img {
 .project {
   position: relative;
 
-  .content-overlay {
-    position: absolute;
-    top: -175px;
-    left: 0;
-    padding: 3rem;
-    width: 350px;
-    height: 175px;
-    background: black;
-    opacity: 0.8;
-    transition: all 0.4s;
-    text-align: center;
-    & a {
-      color: white;
-      font-size: 2rem;
-      margin: 2rem;
-
-      &:hover {
-        opacity: 0.7;
-      }
-    }
-  }
-
   &:hover {
     .content-overlay {
       position: absolute;
@@ -53,6 +30,87 @@ img {
       background: black;
       opacity: 0.7;
       transition: all 0.4s;
+    }
+  }
+}
+
+.content-overlay {
+  position: absolute;
+  top: -175px;
+  left: 0;
+  padding: 3rem;
+  width: 350px;
+  height: 175px;
+  background: black;
+  opacity: 0.8;
+  transition: all 0.4s;
+  text-align: center;
+  & a {
+    color: white;
+    font-size: 2rem;
+    margin: 2rem;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  h1 {
+    text-align: center;
+  }
+
+  .wrapper {
+    position: relative;
+    display: grid;
+    grid-gap: 0.5rem;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 125px;
+
+    & div {
+      overflow: hidden;
+    }
+  }
+
+  img {
+    width: 250px;
+    height: 125px;
+    border: 2px solid black;
+  }
+  .project {
+    position: relative;
+    top: 0;
+    margin: 0 auto;
+
+    &:hover {
+      .content-overlay {
+        position: absolute;
+        width: 250px;
+        height: 125px;
+        top: 0;
+        left: 0;
+      }
+    }
+  }
+
+  .content-overlay {
+    position: absolute;
+    width: 250px;
+    height: 125px;
+    top: -125px;
+
+    & a {
+      color: white;
+      font-size: 1.5rem;
+      margin: 1rem;
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+    & p {
+      display: none;
     }
   }
 }
