@@ -40,9 +40,9 @@ nav {
     position: absolute;
     display: flex;
     flex-direction: column;
-    width: 250px;
+    width: 400px;
     height: 100%;
-    left: -250px;
+    left: -400px;
     border-right: 1px solid #2d2d2d;
 
     transition: 0.3s ease-in;
@@ -52,7 +52,7 @@ nav {
     position: absolute;
     display: flex;
     flex-direction: column;
-    width: 250px;
+    width: 400px;
     height: 100%;
     left: 0;
     top: 0;
@@ -75,16 +75,18 @@ nav {
   .menu-toggle {
     position: absolute;
     top: 1rem;
-    left: 270px;
+    left: 420px;
     z-index: 900;
     cursor: pointer;
+    transition: 0.5s;
   }
   .menu-toggle-active {
     position: absolute;
     top: 1rem;
-    left: 270px;
+    left: 350px;
     z-index: 900;
     cursor: pointer;
+    transition: 0.5s;
 
     & :nth-child(1) {
       display: block;

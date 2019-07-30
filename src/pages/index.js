@@ -10,7 +10,7 @@ const IndexPage = () => {
       <Head title="Home" />
       <div className="logo">
         <h1>Conor Bailey</h1>
-        <h5>Developer, Programmer</h5>
+        <h5>Developer</h5>
       </div>
 
       <div className="social-media">

@@ -48,13 +48,16 @@ export default class NewNavBar extends Component {
               </Link>
             </li>
             <li className={navbarStyles.navItem}>
-              <Link
+              {/* <Link
                 className={navbarStyles.navItem}
                 activeClassName={navbarStyles.activeNavItem}
-                to="/portfolio"
+                to="https://github.com/conorbailey90"
               >
                 Portfolio
-              </Link>
+              </Link> */}
+
+              <a className={navbarStyles.navItem}
+                activeClassName={navbarStyles.activeNavItem} href="https://github.com/conorbailey90" target="_blank">Portfolio</a>
             </li>
             <li className={navbarStyles.navItem}>
               <Link

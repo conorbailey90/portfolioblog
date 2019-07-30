@@ -18,11 +18,15 @@ const aboutPage = () => {
         </p>
         <p>
           I have developed a large passion for web development and programming
-          in general. Thus far I have studied and programmed using the following
-          technologies: HTML, CSS, SASS, JavaScript, React, Gatsby, Node.JS,
-          Python and Git. I'm constantly looking to build on my porfolio so
-          please get in touch if you require help with a project.
-        </p>
+          in general. I am comfortable working with the following technologies:
+          </p>
+        <p>
+          HTML, CSS, Python, JavaScript, SASS, React, Gatsby, Node.JS, Git, GitHub,
+          Unix shell, Application Programming Interfaces (API), Relational Databases, Python Database API,
+          SQL, PostgreSQL, HTTP, Transmission Control Protocol (TCP), Servers, CRUD, Authentication, RESTful API
+          Vagrant, Linux Server, WSGI, Apache, Asynchronous JavaScript, AJAX.
+          </p>
+        
         <p>
           Once again thank you for checking out my website and please do not
           hesitate to contact me if you have any questions. My CV is available
