@@ -52,7 +52,7 @@ nav {
     position: absolute;
     display: flex;
     flex-direction: column;
-    width: 400px;
+    width: 100vw;
     height: 100%;
     left: 0;
     top: 0;
@@ -83,7 +83,7 @@ nav {
   .menu-toggle-active {
     position: absolute;
     top: 1rem;
-    left: 350px;
+    left: 90vw;
     z-index: 900;
     cursor: pointer;
     transition: 0.5s;
